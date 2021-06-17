@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+input {
+    font-size: 1em;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+button {
+    /* zoom: 1.5; */
+    font-size: 1em;
+    background: #999;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 7px 20px;
+    margin-left: 4px;
+}
+
+button:hover {
+    background-color:#ccc;
+}
+
+button:active {
+    background-color:#999;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+    background: #98ec9b;
+    border-radius: 5px;
+    padding: 5px 8px;
+    width: 200px;
+    margin: 5px 2px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+li:hover {
+    opacity: 1;
+}
+
+li span {
+    display: inline-block;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li i {
+    font-weight: bold;
+    float: right;
+    font-style: normal;
+    background: #666;
+    padding: 2px 4px;
+    font-size: 60%;
+    color: white;
+    border-radius: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    margin-top: 3px;
+}
+
+li input {
+    font-size: 95%;
+    padding: 5px 8px;
+    width: 160px;
+    margin: 0px;
+    display: none;
+}
+
+li.edit span {
+    display: none;
+}
+
+li.edit input {
+    display: initial;
+}
