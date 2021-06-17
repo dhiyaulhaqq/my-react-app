@@ -15,7 +15,7 @@ docker-compose.yml
 dist
 
 # PouchDB data
-data
+/data
 
 # log file
 log.txt
