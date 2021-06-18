@@ -27,7 +27,8 @@ class PeopleStore extends EventEmitter {
     }
 
     sync() {
-        var remoteCouch = 'http://localhost:3000/db/people';
+        var hostname = location.origin;
+        var remoteCouch = `${hostname}/db/people`;
         var opts = { /*live: true*/ };
         this.db
             .replicate.to(remoteCouch, opts)
