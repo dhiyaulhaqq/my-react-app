@@ -7,7 +7,7 @@ var ExpressPouchDB = require('express-pouchdb');
 var DataPouchDB = PouchDB.defaults({
     prefix: path.join(__dirname, '/data/')
 });
-var db = ExpressPouchDB(DataPouchDB);
+var db = ExpressPouchDB();
 
 const port = process.env.PORT || 3000; // 5984 PouchDB default port
 
