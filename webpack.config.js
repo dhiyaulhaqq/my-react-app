@@ -1,4 +1,5 @@
 const path = require('path');
+const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -13,6 +14,16 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                exclude: /(node_modules|bower_components)/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: { minimize: false }
+                    }
+                ]
+            },
+            {
                 test: /\.(m?jsx?)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
@@ -24,8 +35,14 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new htmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/index.html'),
+            filename: 'index.html'
+        })
+    ],
     output: {
-        path: path.resolve(__dirname, 'src'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
         clean: false
     }
