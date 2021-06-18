@@ -71,7 +71,7 @@ app.use('/db', express.json());
 
 app.use('/db', db);
 
-app.use('/', express.static('dist'));
+app.use('/', express.static('public'));
 
 app.listen(port, () => {
     console.log(`App is listening at http://localhost:${port}`);

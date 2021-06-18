@@ -13,6 +13,7 @@ docker-compose.yml
 
 # Build
 dist
+/public
 
 # PouchDB data
 /data
