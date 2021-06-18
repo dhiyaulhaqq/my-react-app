@@ -63,7 +63,7 @@ var addHeader = function(req, res, next) {
     next();
 };
 
-// app.use(, express.json());
+app.use('/db', express.json());
 
 // app.use(express.urlencoded({ extended: true }));
 
